@@ -1,0 +1,18 @@
+html(lang="en")
+    head
+        title SCOTT.dept CRUD
+        meta(charset="UTF-8")
+    body
+        h1 부서 등록
+        form(name="deptInsertForm",action="/deptInsert.do", method="POST")
+            p
+                span 부서번호 :&nbsp;
+                input(value="",name="deptno")
+            p
+                span 부서이름 :&nbsp;
+                input(value="",name="dname")
+            p
+                span 지역이름 :&nbsp;
+                input(value="",name="loc")
+            p
+                button(type="submit") 등록제출

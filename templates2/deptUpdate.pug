@@ -1,0 +1,25 @@
+html(lang="en")
+    head
+        title SCOTT.dept CRUD
+        meta(charset="UTF-8")
+        link(rel="stylesheet" href="./public/css/dept.css")
+    body
+        h1
+            strong=dept.DEPTNO
+            span 번 부서 정보 수정
+        form(name="deptUpdateForm",action="/deptUpdate.do", method="POST")
+            p
+                span 부서번호 :&nbsp;
+                strong=dept.DEPTNO
+                input(value=dept.DEPTNO,name="deptno",type="hidden")
+            p
+                span 부서이름 :&nbsp;
+                input(value=dept.DNAME,name="dname")
+            p
+                span 지역이름 :&nbsp;
+                input(value=dept.LOC,name="loc")
+            p
+                button
+                    a(href=`/deptDelete.do?deptno=${dept.DEPTNO}`) 삭제
+                span &nbsp;&nbsp;&nbsp;&nbsp;
+                button(type="submit") 수정제출

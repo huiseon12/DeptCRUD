@@ -1,0 +1,19 @@
+html(lang="en")
+    head
+        title SCOTT.dept CRUD
+        meta(charset="UTF-8")
+        link(rel="stylesheet" href="./public/css/dept.css")
+    body
+        h1
+            strong=dept.DEPTNO
+            span 번 부서 상세 정보
+        div
+            p
+                span 부서이름 :&nbsp;
+                strong=dept.DNAME
+            p
+                span 부서위치 :&nbsp;
+                strong=dept.LOC
+            p
+                button
+                    a(href=`/deptUpdate.do?deptno=${dept.DEPTNO}`) 수정폼
